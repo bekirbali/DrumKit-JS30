@@ -2,6 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
 }
 
 body {
@@ -13,19 +15,38 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  color: white;
+  color: rgb(163, 252, 152);
   .keys {
     display: flex;
-    width: 100%;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    backdrop-filter: blur(8px);
+    padding: 0.5rem;
 
     .key {
+      font-size: 1.2rem;
+      border-radius: 0.4rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      border: 2px solid white;
+      border: 2px solid rgb(151, 218, 250);
       padding: 1rem;
-      width: 4rem;
+      width: 7rem;
+      gap: 0.5rem;
+      transition: 0.1s ease-in-out;
     }
+  }
+  .playing {
+    transform: scale(1.1);
+    border-color: #eeff00;
+    box-shadow: 0 0 1rem 0.2rem #eeff00;
+  }
+
+  .sound {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #7bff00;
   }
 }
